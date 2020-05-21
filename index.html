@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.2.x" src="https://code.angularjs.org/1.2.28/angular.js" data-semver="1.2.28"></script>
+    <script src="app.js"></script>
+
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+<a href="https://www.w3schools.com" target="_blank">Visit W3Schools.com!</a>
+
+<button>B</button>
+<button>C</button>
+    <p>Hello {{name}}!</p>
+
+<p>Name: <input type="text" ng-model="txtname"></p>
+<p>You wrote: {{ txtname }}</p>
+
+
+
+<script>
+
+window.addEventListener('load', (event) => {
+  console.log('page is fully loaded');
+  console.log(location.href);
+});
+
+
+window.addEventListener('click', (event) => {
+  console.log(event.target.nodeName);
+  console.log(event.type);
+ console.log('Element content: ' + event.target.textContent);
+
+  if(event.target.tagName.toLowerCase() === 'a') {
+        var href = event.target.href;
+        console.log(href);
+    }
+
+ 
+});
+
+
+window.addEventListener('keydown', (event) => {
+  console.log(event.target.nodeName);
+  console.log(event.key);
+  
+});
+
+</script>
+  </body>
+
+</html>
